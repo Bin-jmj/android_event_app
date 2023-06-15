@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idRLBSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_shade_1"
+    android:padding="4dp">
+
+    <!--text view for displaying event name-->
+    <TextView
+        android:id="@+id/idTVEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="4dp"
+        android:text="Event Name"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!--image view for displaying event image-->
+    <ImageView
+        android:id="@+id/idIVEvent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/idTVEventName"
+        android:layout_centerVertical="true"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!--text view for displaying event description-->
+    <TextView
+        android:id="@+id/idTVEventLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVEventName"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/idIVEvent"
+        android:layout_toEndOf="@id/idIVEvent"
+        android:padding="3dp"
+        android:text="Location"
+        android:textColor="@color/white" />
+
+
+    <!--text view for displaying event price-->
+    <TextView
+        android:id="@+id/idTVDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVEventLocation"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/idIVEvent"
+        android:padding="3dp"
+        android:text="Date"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idIVEvent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!--button for editing event-->
+        <Button
+            android:id="@+id/idBtnEditEvent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:text="Edit Event"
+            android:textAllCaps="false" />
+
+        <!--button for viewing event details-->
+        <Button
+            android:id="@+id/idBtnVIewDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:text="View Details"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>
